@@ -1,0 +1,19 @@
+{
+  "name": "the-charter-house",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "analyst": "tsx agents/analyst/index.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.104.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

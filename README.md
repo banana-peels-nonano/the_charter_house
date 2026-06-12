@@ -9,6 +9,7 @@ A personal workspace for ideas, experiments, and products.
 - `products/` — things being built seriously, one folder per product
 - `prompts/` — reusable prompts that work well
 - `docs/` — notes, research, and reference material
+- `agents/` — automation that works on this repo (e.g. `npm run analyst` analyzes every idea in `ideas/`)
 
 ## Key files
 
