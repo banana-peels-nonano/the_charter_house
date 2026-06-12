@@ -27,6 +27,21 @@ export function ideaNameFromFile(file: string): string {
   return path.basename(file).replace(/\.md$/i, "");
 }
 
+/** Existing analysis reports in experiments/, for the repeated-risks section. */
+export function findAnalysisFiles(experimentsDir: string): string[] {
+  if (!fs.existsSync(experimentsDir)) return [];
+  return fs
+    .readdirSync(experimentsDir)
+    .filter((f) => f.toLowerCase().endsWith("-analysis.md"))
+    .sort()
+    .map((f) => path.join(experimentsDir, f));
+}
+
+/** "experiments/ai-tutor-analysis.md" -> "ai-tutor" */
+export function ideaNameFromAnalysisFile(file: string): string {
+  return path.basename(file).replace(/-analysis\.md$/i, "");
+}
+
 export function reportRelativePath(ideaName: string): string {
   return `experiments/${ideaName}-analysis.md`;
 }
